@@ -3,5 +3,7 @@
 .hide { display:none; }
 .right { float:right !important; }
 .fullsize { width:100% !important; }
+.mr-3 { margin-right:3px; }
+.hand { cursor: pointer; }
 
 hr { border:none; border-top:1px dashed #919191 !important; }
