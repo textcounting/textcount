@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Build your React app
       - name: Build
@@ -18,7 +18,7 @@ jobs:
 
       # Clone the destination repository
       - name: Clone destination repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: textcounting/textcounting.github.io
           path: https://github.com/textcounting/textcounting.github.io # Specify the folder name to clone into
