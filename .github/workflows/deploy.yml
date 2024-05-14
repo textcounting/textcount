@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v2
 
       # Build your React app
       - name: Build
@@ -18,7 +18,7 @@ jobs:
 
       # Clone the destination repository
       - name: Clone destination repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v2
         with:
           repository: textcounting/textcounting.github.io
           path: https://github.com/textcounting/textcounting.github.io # Specify the folder name to clone into
@@ -31,6 +31,8 @@ jobs:
       - name: Commit and push changes
         run: |
           cd https://github.com/textcounting/textcounting.github.io
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Deploy latest build from textcounting/textcount repository"
           git push origin main
