@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Build your React app
+      - name: Build
+        run: npm install && npm run build
+
+      # Clone the destination repository
+      - name: Clone destination repository
+        uses: actions/checkout@v2
+        with:
+          repository: textcounting/textcounting.github.io
+          path: D:\Projects\Private\TextCount\textcounting.github.io # Specify the folder name to clone into
+
+      # Copy the built files into the destination repository
+      - name: Copy built files
+        run: cp -a build/. D:\Projects\Private\TextCount\textcounting.github.io
+
+      # Commit and push changes to the destination repository
+      - name: Commit and push changes
+        run: |
+          cd D:\Projects\Private\TextCount\textcounting.github.io
+          git add .
+          git commit -m "Deploy latest build from textcounting/textcount repository"
+          git push origin main
