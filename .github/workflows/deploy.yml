@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: textcounting/textcounting.github.io
-          token: ${{ secrets.MY_GITHUB_TOKEN }} # Use the GitHub token from secrets for authentication
+          token: 8BABABDC5F496F023E9F7C55E017A0F9F40E782D65EE27BCB5A0F02F500FDB54 # Use the GitHub token from secrets for authentication
           path: destination # Specify the folder name to clone into
 
       # Copy the built files into the destination repository
