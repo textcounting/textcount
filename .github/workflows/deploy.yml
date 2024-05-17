@@ -27,16 +27,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: textcounting/textcounting.github.io
-          path: https://github.com/textcounting/textcounting.github.io # Specify the folder name to clone into
+          token: ${{ secrets.MY_GITHUB_TOKEN }} # Use the GitHub token from secrets for authentication
+          path: destination # Specify the folder name to clone into
 
       # Copy the built files into the destination repository
       - name: Copy built files
-        run: cp -a build/. https://github.com/textcounting/textcounting.github.io
+        run: cp -a build/. destination
 
       # Commit and push changes to the destination repository
       - name: Commit and push changes
         run: |
-          cd https://github.com/textcounting/textcounting.github.io
+          cd destination
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
