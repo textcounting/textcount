@@ -80,7 +80,7 @@ function MainPage(props:any) {
             <Card>
             <Button type="button" id="btnLiveRemove" className="btn-primary btn-sm mr-3" onClick={fnLiveRemove}>줄간격제거</Button>
             <Button type="button" id="btnLiveAdd" className="btn-warning btn-sm" onClick={fnLiveAdd}>1줄간격주기</Button>
-            <code className="right hand" onClick={gotoGithub}>https://github.com/parkheesung/textcount</code>
+            <code className="right hand" onClick={gotoGithub}>https://github.com/textcounting/textcount</code>
             </Card>
         </Column>
         </Row> 
