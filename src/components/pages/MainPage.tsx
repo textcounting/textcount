@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Container,Row,Column,Button,Card,TextArea } from '../Bootstrap';
+import { useState } from 'react';
+import { Container,Row,Column,Button,Card } from '../Bootstrap';
 
 function MainPage(props:any) {
     const [txt, setText] = useState("");
@@ -62,7 +62,7 @@ function MainPage(props:any) {
     return (
         <Container className="p-3">
         <Row className="p-3 mb-4 bg-light rounded-3">
-            <Column size={8}><h3 className="header">TextCount v1.0</h3></Column>
+            <Column size={8}><h3 className="header">TextCount v1.0.0</h3></Column>
             <Column size={4}>
             <Button type="button" id="btnReset" className="btn-success btn-sm w100 right" onClick={fnReset}>Reset</Button>
             </Column>
