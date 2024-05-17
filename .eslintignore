@@ -1,0 +1,10 @@
+# 이 파일은 ESLint에 의해 무시되는 파일 및 디렉토리를 설정합니다.
+
+# 무시할 디렉토리
+node_modules/
+build/
+dist/
+
+# 무시할 파일
+*.log
+*.tmp
