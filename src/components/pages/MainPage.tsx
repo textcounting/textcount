@@ -83,7 +83,7 @@ function MainPage(props:any) {
             <code className="right hand" onClick={gotoGithub}>https://github.com/parkheesung/textcount</code>
             </Card>
         </Column>
-        </Row>
+        </Row> 
         </Container>
     );
 };
