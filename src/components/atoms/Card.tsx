@@ -3,7 +3,7 @@ function Card(props:any) {
     let imgTag = null;
     let title = null;
     if (props.image !== null && props.image !== undefined && props.image !== "") {
-        imgTag = <img className="card-img-top" src="${props.image}" alt="" />;    
+        imgTag = <img className="card-img-top" src={props.image} alt="" />;    
     }
     if (props.title !== null && props.title !== undefined && props.title !== "") {
         title = <h5 className="card-title">{props.title}</h5>;    

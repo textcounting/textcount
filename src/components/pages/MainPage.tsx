@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Container,Row,Column,Button,Card,TextArea } from '../Bootstrap';
+import { useState } from 'react';
+import { Container,Row,Column,Button,Card } from '../Bootstrap';
 
 function MainPage(props:any) {
     const [txt, setText] = useState("");
